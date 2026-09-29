@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Drive World</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": { "three": "./lib/three.module.js" } }
+</script>
+</head>
+<body>
+<div id="hud">
+  <div id="title">Drive World<small id="hint">Arrows or WASD to drive, Space to drift, R to reset</small></div>
+  <div id="stats"><span id="coins">★ 0 / 0</span><span id="time">0:00.0</span></div>
+  <div id="speed"><b id="mph">0</b> mph</div>
+  <canvas id="map" width="340" height="340"></canvas>
+  <div id="msg"></div>
+</div>
+<div id="touch">
+  <div class="pad left"><button data-k="left">◀</button><button data-k="right">▶</button></div>
+  <div class="pad right"><button data-k="drift" class="small">drift</button><button data-k="brake">▼</button><button data-k="gas">▲</button></div>
+</div>
+<div id="start">
+  <div class="card">
+    <h1>Drive World</h1>
+    <p>Collect every gold coin. Launch off the ramps, grab the boost pads and knock the beach balls around.</p>
+    <p class="keys" id="startKeys">Arrow keys or WASD to drive. Space to drift. R to reset the car.</p>
+    <p class="go">Press any key or tap to start</p>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
